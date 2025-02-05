@@ -1,7 +1,7 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueDevTools from 'vite-plugin-vue-devtools';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
   base: "/prueba-frontend-estatica/",
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)) 
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
   optimizeDeps: {
@@ -20,7 +20,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [],
+      external: ['vue'], // Asegura que Vue no se excluya del bundle
     },
   },
 });
