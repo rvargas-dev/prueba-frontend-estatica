@@ -9,7 +9,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: "/",
+  base: "/prueba-frontend-estatica/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)) 
